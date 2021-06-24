@@ -1,0 +1,24 @@
+.form
+{
+    width: 50%;
+    /* border: 2px solid; */
+}
+.project-title
+{
+    font-family:'ui-serif','Franklin Gothic Medium', 'Arial Narrow';
+   
+    margin-top: 2rem;
+    font-weight: bold;
+}
+.line
+{
+    width: 40%;
+    border-top-width: 1.5 px;
+}
+
+@media only screen and (max-width:1000) {
+    .talk-text
+{
+    font-size: 3rem;
+}
+}

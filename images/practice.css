@@ -1,0 +1,60 @@
+#menu{
+    grid-area: menu;
+    border: 2px solid red;
+}
+#data{
+    grid-area: data;
+    border: 2px solid yellow;
+}
+#aside{
+    grid-area: aside;
+    border: 2px solid black;
+}
+#content
+{
+    grid-area: content;
+    border: 2px solid pink;
+    
+}
+.container
+{
+    display: grid;
+    grid-template-columns:100px,100px,100px,200px;
+    grid-gap: 1rem;
+    /* grid-auto-columns: 20px; */
+    /* grid-template-columns: repeat(3,1fr),5fr; */
+    grid-template-areas:
+     "menu menu menu menu"
+    "data data data aside"
+    "data data data aside"
+    "data data data content";
+    /* "menu menu menu menu"; */
+}
+
+.item
+{
+    background-color: blanchedalmond;
+    border: 2px solid black;
+    margin: 3px;
+    padding: 33px;
+}
+.item:nth-child(2)
+{
+    /* padding: 100px; */
+    /* margin-top: 100px; */
+    /* width: 60rem; */
+    /* height: 50rem; */
+}
+.item:nth-child(3)
+{
+    /* margin-top: 0; */
+    /* width: 24rem; */
+    /* height: rem; */
+
+}
+.item:nth-child(4)
+{
+    /* margin-top: 0; */
+    /* width: 24rem; */
+    /* height: 5rem; */
+}

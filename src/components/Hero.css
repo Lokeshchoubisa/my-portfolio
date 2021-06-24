@@ -1,0 +1,88 @@
+.hero-section
+{
+    display: flex;
+
+}
+.text-area
+{
+    width: 40%;
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.text-area h1
+{
+    font-size: 5rem;
+    margin-bottom: 0;
+    font-family: 'Original Surfer', cursive;
+
+}
+.text-area p
+{
+    /* font:2rem ; */
+    margin-top: 0;
+    padding: 1.5rem;
+    letter-spacing: 1.5px;
+    font-size: 1.2rem;
+    font-family: 'Nunito', sans-serif;
+   
+}
+.img-area
+{
+    width: 60%;
+    /* border: 2px solid black; */
+    /* object-fit: cover; */
+    height: 644px;
+    overflow: hidden;
+    height: calc(100vh - 100px);
+}
+.img-area img
+{
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+    transition: all .5s linear;
+}
+.img-area img:hover
+{
+    transform: translateY(-2px);
+    transition: all .5s linear;
+}
+
+
+
+@media screen and (max-width:1000px) {
+
+    .hero-section
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .text-area
+    {
+        width: 100%;
+        order: 0;
+        margin-top: 0;
+        padding: 3rem 1rem;
+    }
+    .img-area
+    {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        padding: 3rem 1rem;
+    }
+    .text-area h1
+    {
+    font-size: 3rem;
+    margin-bottom: 0;
+    font-family: 'Original Surfer', cursive;
+
+    }
+   
+}

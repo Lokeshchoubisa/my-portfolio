@@ -1,0 +1,12 @@
+.myprofile
+{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.myprofile img
+{
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+}

@@ -52,7 +52,7 @@ export default function Projects() {
             <motion.div variants={projectChildVarient} >
            
             <ProjectComponent  title="Eccomerce project" 
-             description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius maiores atque voluptatibus recusandae, maxime nemo ratione rem temporibus facilis! Deserunt"
+             description="A full-stack web application, 'Eccomerce app', using React and node that allows users to explore various type of product in eccomerce and user can add it to cart as well as buy it. User's progress is stored on a backend created using Node and MongoDB.The backend, built using Node, Express, and Mongo,and user authentication with JWT."
               imageSrc="https://blog.edesk.com/resources/wp-content/uploads/2021/03/find-trending-products-sell-ecommerce.png"
             link="https://user-app-mern-eccomerce.herokuapp.com/" ></ProjectComponent>
 
@@ -60,7 +60,7 @@ export default function Projects() {
 
             <motion.div variants={projectChildVarient} >
             <ProjectComponent  title="Chat app"
-             description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius maiores atque voluptatibus recusandae, maxime nemo ratione rem temporibus facilis! Deserunt"
+             description="Developed a chat app, 'Easy chat' using React and socket.io. React was used to create the front end components while Node and Mongo were used to create a backend that stores user data.All the connection was stablished by socket.io"
               imageSrc="https://cdn.hackernoon.com/hn-images/1*mLE5ZxhtATxrwh20SL2Tlg.png"
                link="https://lokesh-chatapp.herokuapp.com/" >
                </ProjectComponent>

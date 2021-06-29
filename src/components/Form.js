@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export default function Form() {
+
+    const [showThankyou,setThankyou]=useState(false);
+
     return (
         <div>
             <form className="contact-form">
@@ -34,11 +37,15 @@ export default function Form() {
             </div>
             <div className="form-row" >
                 <div className="form-group col-md-12">
-                    <button type="submit" className="btn btn-primary btn-medium">Submit</button> 
+                    <button onClick={(e)=>{
+                        setThankyou(true);
+                        e.preventDefault();
+                        }} type="submit" className="btn btn-primary btn-medium">Submit</button> 
                 </div>
             </div>
-            
+            {showThankyou && <p className="text-success">Thank you for contacting :)</p>}
            </form>
+           
         </div>
     )
 }

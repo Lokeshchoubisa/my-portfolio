@@ -70,7 +70,8 @@ function Hero() {
             <motion.div variants={heroVarients1} animate="visible" initial="hidden" className="text-area">
                 <motion.h1 variants={textTransition} animate="visible" initial="hidden" >Hello World! </motion.h1>
                 <p>I am Lokesh Choubisa,A full stack developer</p>
-                <a href="/contact" className="btn btn-medium btn-primary" >Contact me</a>
+                {/* <a href="/contact" className="btn btn-medium btn-primary" >Contact me</a> */}
+                <a href="/projects" className="btn btn-medium btn-primary" >Visit Projects</a>
             </motion.div>
 
             

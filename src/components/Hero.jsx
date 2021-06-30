@@ -54,9 +54,7 @@ function Hero() {
 
 
     }
-    // console.log(window.innerWidth);
-    // var width_latest=window.innerWidth;
-
+ 
     
     return (
         // {setwidth()}

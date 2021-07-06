@@ -4,6 +4,7 @@ import Form from "../components/Form"
 import MyCard from "../components/MyCard"
 import {motion} from "framer-motion"
 import "./Contact.css"
+import fire from '../firebase'
 
 export default function Contact() {
 

@@ -23,6 +23,11 @@
     margin-bottom: 2rem;
 }
 
+.card-text
+{
+    
+}
+
 @media only screen and (max-width:750px){
  .project
  {

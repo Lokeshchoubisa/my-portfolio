@@ -1,22 +1,61 @@
 import React, { useState } from 'react'
+import fire from '../firebase';
+// import ProjectComponent from './projectComponent';
 
 export default function Form() {
 
+    const sleep = (milliseconds) => {
+        return new Promise(resolve => setTimeout(resolve, milliseconds))
+      }
+
+ 
     const [showThankyou,setThankyou]=useState(false);
+    const [fname,setFname]=useState("");
+    const [lname,setLname]=useState("");
+    const [email,setEmail]=useState("");
+    const [reason,setReason]=useState("");
+    const onSubmit=()=>
+    {
+    fire.database().ref("/users").push({
+        lastName:lname,
+        firstName:fname,
+        email:email,
+        reason:reason
+    });
+ 
+
+    setThankyou(true);
+
+    // sleep(1000);
+    
+    setLname("");
+    setFname("");
+    setEmail("");
+    setReason("");
+
+    
+    // setThankyou(false);
+
+}
 
     return (
         <div>
-            <form className="contact-form">
+            <form onSubmit={e=>{
+                e.preventDefault();
+                onSubmit();
+            }} className="contact-form needs-validation"  novalidate >
             <div className="form-row">
-            <div class="form-group col-md-6">
+            <div className="form-group col-md-6">
 
                 <label for="inputEmail4">First name</label>
-                <input type="text" class="form-control" id="inputEmail4" placeholder="First name" />
+                <input value={fname} onChange={(e)=>setFname(e.target.value)} type="text" class="form-control" id="inputEmail4" placeholder="First name" required />
+                
+                
                 </div>
 
                 <div class="form-group col-md-6">
                 <label for="inputEmail4">Last name</label>
-                <input type="text" class="form-control" id="inputEmail4" placeholder="Last name" />
+                <input value={lname} onChange={(e)=>setLname(e.target.value)} type="text" class="form-control" id="inputEmail4" placeholder="Last name" required />
                 </div>
 
 
@@ -26,21 +65,23 @@ export default function Form() {
             <div class="form-row">
                 <div class="form-group col-md-12">
                 <label for="inputEmail4">Email</label>
-                <input type="email" class="form-control" id="inputEmail4" placeholder="Email" />
+                <input value={email} onChange={(e)=>setEmail(e.target.value)} type="email" class="form-control" id="inputEmail4" placeholder="Email" required />
                 </div>
             </div>
             <div className="form-row" >
                 <div className="form-group col-md-12">
                     <label for="reasonText">Reason for contact</label>
-                    <textarea type="text" className="form-control" id="reasonText" placeholder="Enter reason for contact" />
+                    <textarea value={reason} onChange={(e)=>setReason(e.target.value)} type="text" className="form-control" id="reasonText" placeholder="Enter reason for contact"  />
                 </div>
             </div>
             <div className="form-row" >
                 <div className="form-group col-md-12">
-                    <button onClick={(e)=>{
-                        setThankyou(true);
+                    <button onSubmit={(e)=>{
+                        // console.log("yes");
                         e.preventDefault();
-                        }} type="submit" className="btn btn-primary btn-medium">Submit</button> 
+                        console.log("submitted");
+                        // onSubmit();
+                        }}  type="submit" className="btn btn-primary btn-medium">Submit</button> 
                 </div>
             </div>
             {showThankyou && <p className="text-success">Thank you for contacting :)</p>}
